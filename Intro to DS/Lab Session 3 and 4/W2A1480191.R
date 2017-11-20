@@ -5,6 +5,8 @@ library(readr)
 table1 <- read_csv("~/Data Science/Datasets/Data Set 1a.csv")
 table2 <- read_csv("~/Data Science/Datasets/Data Set 1b.csv")
 
+table1$Quantity = as.numeric(table1$Quantity)
+
 levels(table1$Product)	<- c(levels(table1$Product),	"Galaxy Edge S8")
 table1$Product[table1$Product	== "Galaxi Edge S8"]	<- "Galaxy Edge S8"
 
